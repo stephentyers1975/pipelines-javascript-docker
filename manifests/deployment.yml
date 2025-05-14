@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: stephentyerspipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: stephentyerspipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: stephentyerspipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: stephentyerspipelinesjavascriptdocker 
+          image: tyersacrregistry.azurecr.io/stephentyerspipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
